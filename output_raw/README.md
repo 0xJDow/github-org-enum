@@ -1,0 +1,1 @@
+The `output_raw` directory stores raw trufflehog results in `.json` format.

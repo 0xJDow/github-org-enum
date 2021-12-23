@@ -1,0 +1,1 @@
+The `output_parsed` directory stores parsed trufflehog results. Each file contains unique secret values that map back to files stored in the `output_raw` directory.
