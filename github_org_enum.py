@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-"""
-Get a list of all the public repos of a given github organization
-"""
 import os
 import json
 import re
@@ -17,8 +14,8 @@ from github import Github
 from truffleHog import truffleHog
 from termcolor import colored
 
-parser = argparse.ArgumentParser(description="Get a list of GitHub repository URLs for a given organization.")
-parser.add_argument("organization", type=str, help="The organization to pull repos from.")
+parser = argparse.ArgumentParser(description="Enumerate a GitHub organization for secrets in source.")
+parser.add_argument("organization", type=str, help="The organization to enumerate.")
 parser.add_argument("--access-token", type=str, default=None, help="A github access token to use (improved rate limiting).")
 parser.add_argument("--include-members", default=False, action="store_true", help="Recursively gets repos from all organization members.")
 parser.add_argument("--slack-webhook", type=str, default=None, help="A slack webhook token for optionally emitting parsed results to slack.")
