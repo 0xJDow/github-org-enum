@@ -14,12 +14,12 @@ from github import Github
 from truffleHog import truffleHog
 from termcolor import colored
 
-parser = argparse.ArgumentParser(description="Enumerate a GitHub organization for secrets in source.")
+parser = argparse.ArgumentParser(description="Enumerate an entire github organization and, optionally, it's members for secrets in source.")
 parser.add_argument("organization", type=str, help="The organization to enumerate.")
 parser.add_argument("--access-token", type=str, default=None, help="A github access token to use (improved rate limiting).")
-parser.add_argument("--include-members", default=False, action="store_true", help="Recursively gets repos from all organization members.")
+parser.add_argument("--include-members", default=False, action="store_true", help="Enumerate repositories of organization members.")
 parser.add_argument("--slack-webhook", type=str, default=None, help="A slack webhook token for optionally emitting parsed results to slack.")
-parser.add_argument("--threads", type=int, default=5, help="How many threads you want to run the application with")
+parser.add_argument("--threads", type=int, default=5, help="How many threads you want to run the application with (default 5).")
 args = parser.parse_args()
 
 # Queue object for multithreading
