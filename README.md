@@ -2,7 +2,7 @@
 
 ## Update
 
-Trufflehog v3.0 now supports this feature, so this project will no longer be maintained: <https://github.com/0xJDow/github-org-enum>
+Trufflehog v3.0 now supports this feature, so this project will no longer be maintained, see: <https://github.com/trufflesecurity/trufflehog#scanning-an-organization>
 
 ## Installation
 
